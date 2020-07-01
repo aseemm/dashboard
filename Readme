@@ -1,0 +1,10 @@
+
+# clean up existing containers
+docker container rm $(docker container ps -aq) -f
+
+# build and run
+docker-compose build
+docker-compose up -d
+
+# to see logs
+docker-compose logs -f dash
